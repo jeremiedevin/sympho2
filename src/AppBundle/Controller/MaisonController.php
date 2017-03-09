@@ -19,4 +19,12 @@ class MaisonController extends Controller
         // replace this example code with whatever you need
         return $this->render('Maison/index.html.twig',["maisons"=>$maisons]);
     }
+    
+    /**
+     * @Route("/maisons/ajouter", name="ajouterMaison")
+     */
+    public function ajouterAction(){
+        
+    }
+    
 }
