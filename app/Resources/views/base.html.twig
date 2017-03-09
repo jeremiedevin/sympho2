@@ -22,12 +22,14 @@
                   <ul class="nav navbar-nav">
                     <li class="active"><a href="{{ path("homepage") }}">Home</a></li>
                     <li><a href="#">Gestion des maisons</a></li>
-                    <li><a href="#">Gestion des chtons</a></li>
+                    <li><a href="#">Gestion des chatons</a></li>
                   </ul>
                 </div>
             </nav>
         </div>    
-        {% block body %}{% endblock %}
+        <div class="container">
+            {% block body %}{% endblock %}
+        </div>
         {% block javascripts %}{% endblock %}
     </body>
 </html>
