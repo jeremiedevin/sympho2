@@ -31,7 +31,7 @@ class MaisonController extends Controller
         $form=$this->createForm(\AppBundle\Form\MaisonType::class, $maison);
         
         // ici je gérerai le retour en POST...
-        return $this-render("Maison/ajouter.html.twig",
+        return $this->render("Maison/ajouter.html.twig",
                 ["formulaire"=>$form->createView()]);
         
     }

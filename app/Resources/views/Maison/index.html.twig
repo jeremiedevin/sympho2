@@ -5,4 +5,5 @@
     {% for maison in maisons %}
         {{ maison.nom }} <br>
     {% endfor %}
+    <p><a href="{{ path("ajouterMaison") }}" class="btn btn-primary">Ajouter une maison</a></p>
 {% endblock %}
