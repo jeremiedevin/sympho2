@@ -131,7 +131,7 @@ class Maison
     {
         $this->chatons->removeElement($chaton);
     }
-    /* */
+    
 
     /**
      * Get chatons
