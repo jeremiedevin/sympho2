@@ -13,7 +13,10 @@ class MaisonType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('nom')->add('adresse')        ;
+        $builder
+                ->add('nom')
+                ->add('adresse') 
+                ->add('enregistrer', \Symfony\Component\Form\Extension\Core\Type\SubmitType::class, ["attr" =>["class"=>"btn btn-success"]]);
     }
     
     /**
