@@ -20,7 +20,7 @@
             <td>{{ maison.nom }}</td>
             <td>{{ maison.adresse }}</td>
             <td>
-                <a href="#" class="btn btn-sm btn-primary glyphicon glyphicon-pencil"></a>
+                <a href="{{ path("modifierMaison",{"id": maison.id}) }}" class="btn btn-sm btn-primary glyphicon glyphicon-pencil"></a>
             </td>
         </tr>
     </table>    

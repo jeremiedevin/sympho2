@@ -70,12 +70,12 @@ class MaisonController extends Controller
             $em->persist($maison);
             $em->flush();
             
-            $this->addFlash('notice', "La maison ".$maison->getNom()." a bien été ajoutée.");
+            $this->addFlash('notice', "La maison ".$maison->getNom()." a bien été modifiée.");
             return $this->redirectToRoute("listerMaisons");
         }
         
         // ici je gérerai le retour en POST...
-        return $this->render("Maison/ajouter.html.twig",
+        return $this->render("Maison/modifier.html.twig",
                 ["formulaire"=>$form->createView()]);
         
     }
