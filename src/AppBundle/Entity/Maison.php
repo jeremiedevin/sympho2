@@ -93,4 +93,11 @@ class Maison
     {
         return $this->adresse;
     }
+    
+    /**
+     *
+     * @ORM\OneToMany(targetEntity="Chaton",mappedBy="maison")
+     */
+    private $chatons;
+    
 }

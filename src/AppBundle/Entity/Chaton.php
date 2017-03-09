@@ -160,7 +160,7 @@ class Chaton
     /** 
      *
      * @ORM\ManyToOne(targetEntity="Maison", inversedBy="chatons")
-     * @ORM\JoinColumn(name="id_maison", referenceColumnName="id", nullable=false)
+     * @ORM\JoinColumn(name="id_maison", referencedColumnName="id", nullable=false)
      */
     private $maison; 
     
