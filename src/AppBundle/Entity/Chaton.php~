@@ -165,28 +165,5 @@ class Chaton
     private $maison; 
     
     
-
-    /**
-     * Set maison
-     *
-     * @param \AppBundle\Entity\Maison $maison
-     *
-     * @return Chaton
-     */
-    public function setMaison(\AppBundle\Entity\Maison $maison)
-    {
-        $this->maison = $maison;
-
-        return $this;
-    }
-
-    /**
-     * Get maison
-     *
-     * @return \AppBundle\Entity\Maison
-     */
-    public function getMaison()
-    {
-        return $this->maison;
-    }
 }
+
