@@ -24,6 +24,13 @@ class MaisonController extends Controller
      * @Route("/maisons/ajouter", name="ajouterMaison")
      */
     public function ajouterAction(){
+        // je crée un objet vide
+        $maison=new \AppBundle\Entity\Maison();
+        
+        // je crée au formulaire pour cet objet
+        $form=$this->createForm(\AppBundle\Form\MaisonType::class, $maison);
+        
+        // ici je gérerai le retour en POST...
         
     }
     
