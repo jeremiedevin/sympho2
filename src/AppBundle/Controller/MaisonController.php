@@ -52,8 +52,14 @@ class MaisonController extends Controller
      * })
      */
     public function modifierAction($id,Request $request){
-        // je crée un objet vide
-        $maison=new \AppBundle\Entity\Maison();
+        // je récupère l'objet
+        $em=$this->getDoctrine()->getManager();
+        $maison=$em->getRepository("AppBundle:Maison")
+                ->find($id);
+        
+        if ($maison==null) {
+            throw new \Symfony\Component\HttpKernel\Exception\NotFoundHttpException("La maison n'existe pas");
+        }
         
         // je crée au formulaire pour cet objet
         $form=$this->createForm(\AppBundle\Form\MaisonType::class, $maison);
