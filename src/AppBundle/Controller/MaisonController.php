@@ -32,7 +32,7 @@ class MaisonController extends Controller
         
         // ici je gérerai le retour en POST...
         return $this-render("Maison/ajouter.html.twig",
-                ["form"=>$form->createView()]);
+                ["formulaire"=>$form->createView()]);
         
     }
     
