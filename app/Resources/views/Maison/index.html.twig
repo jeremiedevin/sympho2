@@ -9,8 +9,21 @@
         </div>    
     {% endfor %}
         
+    <table class="table">
+        <tr>
+            <th>Nom</th>
+            <th>Adresse</th>
+            <th></th>
+        </tr>    
     {% for maison in maisons %}
-        {{ maison.nom }} <br>
+        <tr>
+            <td>{{ maison.nom }}</td>
+            <td>{{ maison.adresse }}</td>
+            <td>
+                <a href="#" class="btn btn-sm btn-primary glyphicon glyphicon-pencil"></a>
+            </td>
+        </tr>
+    </table>    
     {% endfor %}
     <p><a href="{{ path("ajouterMaison") }}" class="btn btn-primary">Ajouter une maison</a></p>
 {% endblock %}
