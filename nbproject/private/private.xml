@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/wamp64/www/SYMPHONY/ChatonsBDD_B2/app/config/parameters.yml</file>
-            <file>file:/D:/wamp64/www/SYMPHONY/ChatonsBDD_B2/</file>
+            <file>file:/D:/wamp64/www/SYMPHONY/ChatonsBDD_B2/src/AppBundle/Form/MaisonType.php</file>
+            <file>file:/D:/wamp64/www/SYMPHONY/ChatonsBDD_B2/src/AppBundle/Entity/Chaton.php</file>
+            <file>file:/D:/wamp64/www/SYMPHONY/ChatonsBDD_B2/src/AppBundle/Controller/DefaultController.php</file>
+            <file>file:/D:/wamp64/www/SYMPHONY/ChatonsBDD_B2/app/Resources/views/Maison/index.html.twig</file>
+            <file>file:/D:/wamp64/www/SYMPHONY/ChatonsBDD_B2/app/Resources/views/default/index.html.twig</file>
+            <file>file:/D:/wamp64/www/SYMPHONY/ChatonsBDD_B2/src/AppBundle/Controller/MaisonController.php</file>
+            <file>file:/D:/wamp64/www/SYMPHONY/ChatonsBDD_B2/src/AppBundle/Entity/Maison.php</file>
+            <file>file:/D:/wamp64/www/SYMPHONY/ChatonsBDD_B2/app/Resources/views/base.html.twig</file>
         </group>
     </open-files>
 </project-private>
