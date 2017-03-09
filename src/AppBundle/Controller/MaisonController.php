@@ -23,12 +23,22 @@ class MaisonController extends Controller
     /**
      * @Route("/maisons/ajouter", name="ajouterMaison")
      */
-    public function ajouterAction(){
+    public function ajouterAction(Request $request){
         // je crée un objet vide
         $maison=new \AppBundle\Entity\Maison();
         
         // je crée au formulaire pour cet objet
         $form=$this->createForm(\AppBundle\Form\MaisonType::class, $maison);
+        
+        // traitement du retour
+        if ($form->handleRequest($request)->isValid()) {
+            $em=$this->getDoctrine()->getManager();
+            $em->persist($maison);
+            $em->flush();
+            
+            $this->addFlash('notice', "La maison ".$maison->getNom()." a bien été ajoutée.");
+            return $this->redirectToRoute("listerMaisons");
+        }
         
         // ici je gérerai le retour en POST...
         return $this->render("Maison/ajouter.html.twig",
