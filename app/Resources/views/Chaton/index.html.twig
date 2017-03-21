@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Gestion des Chatons</h1>
+   
+    {% for flash_message in app.session.flashbag.get("notice") %}
+        <div class="alert alert-success">
+            {{ flash_message }}
+        </div>    
+    {% endfor %}
+        
+    <table class="table">
+        <tr>
+            <th>Nom</th>
+            <th>Adresse</th>
+            <th></th>
+        </tr>    
+    {% for maison in maisons %}
+        <tr>
+            <td>{{ maison.nom }}</td>
+            <td>{{ maison.adresse }}</td>
+            <td>
+                <a href="{{ path("modifierMaison",{"id": maison.id}) }}" class="btn btn-sm btn-primary glyphicon glyphicon-pencil"></a>
+            </td>
+        </tr>
+    </table>    
+    {% endfor %}
+    <p><a href="{{ path("ajouterMaison") }}" class="btn btn-primary">Ajouter une maison</a></p>
+{% endblock %}
