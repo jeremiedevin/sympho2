@@ -13,18 +13,21 @@
         <tr>
             <th>Nom</th>
             <th>Race</th>
+            <th>Date de naissance/</th>
             <th>Photos</th>
+            <th>Modifier</th>
         </tr>    
     {% for chaton in chatons %}
         <tr>
             <td>{{ chaton.nom }}</td>
             <td>{{ chaton.race }}</td>
-            <td>{{ chaton.urlPhoto }}</td>
+            <td>{{ chaton.dateNaissance|date("d/m/Y") }}</td>
+            <td><a href="{{ chaton.urlPhoto }}" data-fancybox="gallery" class="glyphicon glyphicon-eye-open btn btn-success btn-sm"></a> </td>
             <td>
                 <a href="{{ path("modifierChaton",{"id": chaton.id}) }}" class="btn btn-sm btn-primary glyphicon glyphicon-pencil"></a>
             </td>
         </tr>
-    </table>    
     {% endfor %}
+    </table>    
     <p><a href="{{ path("ajouterChaton") }}" class="btn btn-primary">Ajouter un chaton</a></p>
 {% endblock %}

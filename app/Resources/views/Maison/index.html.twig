@@ -13,7 +13,7 @@
         <tr>
             <th>Nom</th>
             <th>Adresse</th>
-            <th></th>
+            <th>Modifier</th>
         </tr>    
     {% for maison in maisons %}
         <tr>
@@ -22,8 +22,8 @@
             <td>
                 <a href="{{ path("modifierMaison",{"id": maison.id}) }}" class="btn btn-sm btn-primary glyphicon glyphicon-pencil"></a>
             </td>
-        </tr>
-    </table>    
+        </tr> 
     {% endfor %}
+    </table>   
     <p><a href="{{ path("ajouterMaison") }}" class="btn btn-primary">Ajouter une maison</a></p>
 {% endblock %}
