@@ -12,18 +12,19 @@
     <table class="table">
         <tr>
             <th>Nom</th>
-            <th>Adresse</th>
-            <th></th>
+            <th>Race</th>
+            <th>Photos</th>
         </tr>    
-    {% for maison in maisons %}
+    {% for chaton in chatons %}
         <tr>
-            <td>{{ maison.nom }}</td>
-            <td>{{ maison.adresse }}</td>
+            <td>{{ chaton.nom }}</td>
+            <td>{{ chaton.race }}</td>
+            <td>{{ chaton.urlPhoto }}</td>
             <td>
-                <a href="{{ path("modifierMaison",{"id": maison.id}) }}" class="btn btn-sm btn-primary glyphicon glyphicon-pencil"></a>
+                <a href="{{ path("modifierChaton",{"id": chaton.id}) }}" class="btn btn-sm btn-primary glyphicon glyphicon-pencil"></a>
             </td>
         </tr>
     </table>    
     {% endfor %}
-    <p><a href="{{ path("ajouterMaison") }}" class="btn btn-primary">Ajouter une maison</a></p>
+    <p><a href="{{ path("ajouterChaton") }}" class="btn btn-primary">Ajouter un chaton</a></p>
 {% endblock %}
