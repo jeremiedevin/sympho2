@@ -1,4 +1,4 @@
-<?php
+x²<?php
 
 namespace AppBundle\Form;
 
@@ -13,7 +13,12 @@ class ChatonType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('nom')->add('dateNaissance')->add('race')->add('urlPhoto')->add('maison')        ;
+        $builder->add('nom')
+                ->add('dateNaissance', \Symfony\Component\Form\Extension\Core\Type\DateTimeType::class)
+                ->add('race')
+                ->add('urlPhoto')
+                ->add('maison', \Symfony\Bridge\Doctrine\Form\Type\EntityType::class,['class'=>'AppBundle:Maison','choice_label'=>'nom'])    
+                ->add('enregistrer', \Symfony\Component\Form\Extension\Core\Type\SubmitType::class, ["attr" =>["class"=>"btn btn-success"]]);
     }
     
     /**
