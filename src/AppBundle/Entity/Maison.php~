@@ -100,4 +100,46 @@ class Maison
      */
     private $chatons;
     
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->chatons = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add chaton
+     *
+     * @param \AppBundle\Entity\Chaton $chaton
+     *
+     * @return Maison
+     */
+    public function addChaton(\AppBundle\Entity\Chaton $chaton)
+    {
+        $this->chatons[] = $chaton;
+
+        return $this;
+    }
+
+    /**
+     * Remove chaton
+     *
+     * @param \AppBundle\Entity\Chaton $chaton
+     */
+    public function removeChaton(\AppBundle\Entity\Chaton $chaton)
+    {
+        $this->chatons->removeElement($chaton);
+    }
+    
+
+    /**
+     * Get chatons
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getChatons()
+    {
+        return $this->chatons;
+    }
 }
