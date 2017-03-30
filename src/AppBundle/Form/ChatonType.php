@@ -17,7 +17,8 @@ class ChatonType extends AbstractType
                 ->add('dateNaissance', \Symfony\Component\Form\Extension\Core\Type\DateTimeType::class)
                 ->add('race')
                 ->add('urlPhoto')
-                ->add('maison', \Symfony\Bridge\Doctrine\Form\Type\EntityType::class,['class'=>'AppBundle:Maison','choice_label'=>'nom'])    
+                ->add('maison', \Symfony\Bridge\Doctrine\Form\Type\EntityType::class,['class'=>'AppBundle:Maison','choice_label'=>'nom'])
+                ->add('proprietaires', \Symfony\Bridge\Doctrine\Form\Type\EntityType::class,['class'=>'AppBundle:Proprietaire','choice_label'=>'nom'])  
                 ->add('enregistrer', \Symfony\Component\Form\Extension\Core\Type\SubmitType::class, ["attr" =>["class"=>"btn btn-success"]]);
     }
     
