@@ -157,6 +157,17 @@ class Chaton
     }
     
     
+    /**
+     *
+     * @ORM\ManyToMany(targetEntity="Proprietaire",mappedBy="chatons")
+     */
+    private $proprietaires;
+    
+    public function __construct() {
+        $this->proprietaires = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+    
+    
     /** 
      *
      * @ORM\ManyToOne(targetEntity="Maison", inversedBy="chatons")

@@ -157,6 +157,17 @@ class Chaton
     }
     
     
+    /**
+     *
+     * @ORM\ManyToMany(targetEntity="Proprietaire",mappedBy="chatons")
+     */
+    private $proprietaires;
+    
+    public function __construct() {
+        $this->proprietaires = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+    
+    
     /** 
      *
      * @ORM\ManyToOne(targetEntity="Maison", inversedBy="chatons")
@@ -188,5 +199,39 @@ class Chaton
     public function getMaison()
     {
         return $this->maison;
+    }
+
+    /**
+     * Add proprietaire
+     *
+     * @param \AppBundle\Entity\Proprietaire $proprietaire
+     *
+     * @return Chaton
+     */
+    public function addProprietaire(\AppBundle\Entity\Proprietaire $proprietaire)
+    {
+        $this->proprietaires[] = $proprietaire;
+
+        return $this;
+    }
+
+    /**
+     * Remove proprietaire
+     *
+     * @param \AppBundle\Entity\Proprietaire $proprietaire
+     */
+    public function removeProprietaire(\AppBundle\Entity\Proprietaire $proprietaire)
+    {
+        $this->proprietaires->removeElement($proprietaire);
+    }
+
+    /**
+     * Get proprietaires
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getProprietaires()
+    {
+        return $this->proprietaires;
     }
 }
