@@ -2,16 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/D:/wamp64/www/SYMPHONY/ChatonsBDD_B2/src/AppBundle/Entity/Maison.php</file>
-            <file>file:/D:/wamp64/www/SYMPHONY/ChatonsBDD_B2/app/Resources/views/Chaton/index.html.twig</file>
-            <file>file:/D:/wamp64/www/SYMPHONY/ChatonsBDD_B2/src/AppBundle/Controller/MaisonController.php</file>
-            <file>file:/D:/wamp64/www/SYMPHONY/ChatonsBDD_B2/src/AppBundle/Controller/ChatonController.php</file>
-            <file>file:/D:/wamp64/www/SYMPHONY/ChatonsBDD_B2/src/AppBundle/Form/ChatonType.php</file>
-            <file>file:/D:/wamp64/www/SYMPHONY/ChatonsBDD_B2/src/AppBundle/Entity/Chaton.php</file>
-            <file>file:/D:/wamp64/www/SYMPHONY/ChatonsBDD_B2/src/AppBundle/Controller/DefaultController.php</file>
-            <file>file:/D:/wamp64/www/SYMPHONY/ChatonsBDD_B2/src/AppBundle/Entity/Proprietaire.php</file>
-            <file>file:/D:/wamp64/www/SYMPHONY/ChatonsBDD_B2/app/Resources/views/Chaton/modifier.html.twig</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

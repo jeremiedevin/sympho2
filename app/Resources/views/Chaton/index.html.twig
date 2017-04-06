@@ -12,6 +12,7 @@
     <table class="table">
         <tr>
             <th>Nom</th>
+            <th>Description</th>
             <th>Race</th>
             <th>Date de naissance/</th>
             <th>Photos</th>
@@ -20,6 +21,7 @@
     {% for chaton in chatons %}
         <tr>
             <td>{{ chaton.nom }}</td>
+            <td>{{chaton.description|raw}}</td>
             <td>{{ chaton.race }}</td>
             <td>{{ chaton.dateNaissance|date("d/m/Y") }}</td>
             <td><a href="{{ chaton.urlPhoto }}" data-fancybox="gallery" class="glyphicon glyphicon-eye-open btn btn-success btn-sm"></a> </td>

@@ -49,7 +49,14 @@ class Chaton
      */
     private $urlPhoto;
 
-
+    /**
+     * @var text
+     *
+     * @ORM\Column(name="description", type="text")
+     */
+    private $description;
+    
+    
     /**
      * Get id
      *
@@ -233,5 +240,29 @@ class Chaton
     public function getProprietaires()
     {
         return $this->proprietaires;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     *
+     * @return Chaton
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
     }
 }

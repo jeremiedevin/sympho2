@@ -49,7 +49,14 @@ class Chaton
      */
     private $urlPhoto;
 
-
+    /**
+     * @var text
+     *
+     * @ORM\Column(name="description", type="text")
+     */
+    private $description;
+    
+    
     /**
      * Get id
      *
@@ -199,5 +206,39 @@ class Chaton
     public function getMaison()
     {
         return $this->maison;
+    }
+
+    /**
+     * Add proprietaire
+     *
+     * @param \AppBundle\Entity\Proprietaire $proprietaire
+     *
+     * @return Chaton
+     */
+    public function addProprietaire(\AppBundle\Entity\Proprietaire $proprietaire)
+    {
+        $this->proprietaires[] = $proprietaire;
+
+        return $this;
+    }
+
+    /**
+     * Remove proprietaire
+     *
+     * @param \AppBundle\Entity\Proprietaire $proprietaire
+     */
+    public function removeProprietaire(\AppBundle\Entity\Proprietaire $proprietaire)
+    {
+        $this->proprietaires->removeElement($proprietaire);
+    }
+
+    /**
+     * Get proprietaires
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getProprietaires()
+    {
+        return $this->proprietaires;
     }
 }

@@ -14,6 +14,7 @@ class ChatonType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->add('nom')
+                ->add('description', \Ivory\CKEditorBundle\Form\Type\CKEditorType::class)
                 ->add('dateNaissance', \Symfony\Component\Form\Extension\Core\Type\DateTimeType::class)
                 ->add('race')
                 ->add('urlPhoto')
