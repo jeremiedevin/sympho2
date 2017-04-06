@@ -1,0 +1,12 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: 127.0.0.1
+    database_port: null
+    database_name: chatonsbdd_b2
+    database_user: chatonsbdd_b2
+    database_password: jaimeleschatons
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: null
+    mailer_password: null
+    secret: be394a9dedfbb9c0817c414e4ae11eb40a812fb8
